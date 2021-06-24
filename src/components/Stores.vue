@@ -3,29 +3,35 @@
     <button @click.prevent="show = 'stores'">Show stores</button>
     <button @click.prevent="show = 'cities'">Show cities</button>
     <ul v-if="show === 'stores'">
-      <li v-for="store in stores" :key="store.uuid">{{ store.addressName }}</li>
+      <JumboList :items="getShopsByName"/>
     </ul>
     <ul v-if="show === 'cities'">
-      <li v-for="city in cities" :key="city">{{ city }}</li>
+      <JumboList :items="getShopsByCity"/>
     </ul>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
+import JumboList from './common/JumboList.vue';
 
 export default {
+  name: 'Stores',
+
+  components: {
+    JumboList,
+  },
+
   data: () => ({
     show: '',
-    cities: ['Amsterdam', 'Veghel'],
-    stores: [
-      { uuid: 123, addressName: 'Store 1' },
-      { uuid: 456, addressName: 'Store 2' },
-    ],
   }),
 
   created() {
     this.getInitialData();
+  },
+
+  computed: {
+    ...mapGetters('main', ['getShopsByName', 'getShopsByCity']),
   },
 
   methods: {
