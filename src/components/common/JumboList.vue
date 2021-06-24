@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <ul>
     <JumboListItem v-for="item in items" :key="item" :label="item"/>
-  </div>
+  </ul>
 </template>
 
 <script>

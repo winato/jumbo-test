@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <li>
     {{ label }}
-  </div>
+  </li>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
     label: {
       type: String,
       required: true,
-    }
-  }
-}
+    },
+  },
+};
 </script>

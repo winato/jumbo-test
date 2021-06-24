@@ -1,18 +1,19 @@
 <template>
   <div>
-    <button @click.prevent="show = 'stores'">Show stores</button>
-    <button @click.prevent="show = 'cities'">Show cities</button>
-    <ul v-if="show === 'stores'">
-      <JumboList :items="getShopsByName"/>
-    </ul>
-    <ul v-if="show === 'cities'">
-      <JumboList :items="getShopsByCity"/>
-    </ul>
+    <button @click.prevent="selectListType('stores')">Show stores</button>
+    <button @click.prevent="selectListType('cities')">Show cities</button>
+    <JumboList :items="getShopsByName" v-if="listType === 'stores'"/>
+    <JumboList :items="getShopsByCity" v-if="listType === 'cities'"/>
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+import {
+  mapActions,
+  mapGetters,
+  mapMutations,
+  mapState,
+} from 'vuex';
 import JumboList from './common/JumboList.vue';
 
 export default {
@@ -22,20 +23,22 @@ export default {
     JumboList,
   },
 
-  data: () => ({
-    show: '',
-  }),
-
   created() {
     this.getInitialData();
   },
 
   computed: {
     ...mapGetters('main', ['getShopsByName', 'getShopsByCity']),
+    ...mapState('main', ['listType']),
   },
 
   methods: {
     ...mapActions('main', ['getInitialData']),
+    ...mapMutations('main', ['setListType']),
+
+    selectListType(type) {
+      this.setListType(type);
+    },
   },
 };
 </script>
