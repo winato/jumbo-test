@@ -1,10 +1,9 @@
 <template>
-  <div class="stores-search">
-    <JumboInput
-      placeholder="Search"
-      @input="onSearch"
-    />
-  </div>
+  <JumboInput
+    class="stores-search"
+    placeholder="Search"
+    @input="onSearch"
+  />
 </template>
 
 <script>

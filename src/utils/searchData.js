@@ -1,5 +1,5 @@
 const searchData = ({ data, text, param }) => data.filter((item) => item[param]
   .toLowerCase()
-  .indexOf(text) >= 0);
+  .includes(text.toLowerCase()));
 
 export default searchData;

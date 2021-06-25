@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <JumboList
-      :items="getStoresByCity"
-      :loading="isLoading"
-    />
-  </div>
+  <JumboList
+    :items="getStoresByCity"
+    :loading="isLoading"
+  />
 </template>
 
 <script>

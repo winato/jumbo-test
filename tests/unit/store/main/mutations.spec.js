@@ -44,3 +44,33 @@ test('Test "setListType" mutation', () => {
   mutations.setListType(state, 'stores');
   expect(state.listType).toBe('stores');
 })
+
+test('Test "setSearch" mutation', () => {
+  const state = {
+    initialData: [
+      {
+        city: 'Amsterdam',
+      },
+      {
+        city: 'Amersfoort'
+      },
+      {
+        city: 'Utrecht',
+      }
+    ],
+    listType: 'cities',
+  };
+
+  const searchString = 'Am';
+
+  mutations.setSearch(state, searchString);
+  expect(state.search).toBe(searchString);
+  expect(state.searchData).toEqual([
+    {
+      city: 'Amsterdam',
+    },
+    {
+      city: 'Amersfoort',
+    },
+  ])
+})

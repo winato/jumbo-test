@@ -38,7 +38,7 @@ export default {
     padding: 0;
   }
 
-  .no-results-alert {
+  .no-results-alert, .loading-alert {
     text-align: center;
   }
 </style>
