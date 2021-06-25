@@ -1,10 +1,12 @@
 <template>
   <div class="stores-selector">
     <JumboButton
+      class="stores-button"
       @click="onSelect('stores')"
       :active="listType === 'stores'"
     >Show stores</JumboButton>
     <JumboButton
+      class="cities-button"
       @click="onSelect('cities')"
       :active="listType === 'cities'"
     >Show cities</JumboButton>

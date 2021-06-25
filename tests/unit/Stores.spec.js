@@ -1,30 +1,25 @@
-import { mount, createLocalVue, shallowMount } from '@vue/test-utils';
-import Stores from '@/components/Stores.vue';
 import Vuex from 'vuex'
+import { shallowMount, shallow, createLocalVue } from '@vue/test-utils';
+import store from '@/store';
+import Stores from '@/components/features/Stores.vue';
+import StoresByName from '@/components/features/StoresByName.vue';
+import StoresSelector from '@/components/features/StoresSelector.vue';
+import StoresByCity from '@/components/features/StoresByCity.vue';
+import StoresSearch from '@/components/features/StoresSearch.vue';
 
-const localVue = createLocalVue()
-localVue.use(Vuex)
+const localVue = createLocalVue();
 
-describe("Stores", () => {
-  let actions
-  let store
+localVue.use(Vuex);
 
-  beforeEach(() => {
-    actions = {
-      getInitialData: jest.fn(),
-    }
-    store = new Vuex.Store({
-      modules: {
-        namespaced: true,
-        main: {
-          actions,
-        },
-      },
-    })
+describe("Test Stores.vue", () => {
+  it('Display StoresByName, with default listType', () => {
+    const wrapper = shallowMount(Stores, {
+      localVue,
+      store,
+    });
+    expect(wrapper.findComponent(StoresByName).exists()).toBe(true)
+    expect(wrapper.findComponent(StoresByCity).exists()).toBe(false)
+    expect(wrapper.findComponent(StoresSelector).exists()).toBe(true)
+    expect(wrapper.findComponent(StoresSearch).exists()).toBe(true)
   });
-
-  it("should call getInitialData methods when component is created", () => {
-    const wrapper = mount(Stores, { store, localVue })
-    expect(actions.getInitialData).toBeCalledTimes(1);
-   })
 })

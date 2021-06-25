@@ -1,7 +1,7 @@
 <template>
   <input
     class="input"
-    :type="type"
+    type="text"
     @input="$emit('input', $event.target.value)"
     :placeholder="placeholder"
     :value="value"
@@ -20,10 +20,6 @@ export default {
     placeholder: {
       type: String,
       default: '',
-    },
-    type: {
-      type: String,
-      default: 'text',
     },
   },
 };

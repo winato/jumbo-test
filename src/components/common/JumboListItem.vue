@@ -23,7 +23,8 @@ export default {
     display: inline-block;
     background: $yellow;
     margin: .5rem;
-    padding: .4rem .5rem;
+    padding: .4rem 1rem;
     font-weight: 900;
+    border-radius: .2rem;
   }
 </style>

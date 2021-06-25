@@ -1,8 +1,10 @@
 <template>
   <ul class="list">
-    <JumboListItem v-for="item in items" :key="item" :label="item"/>
+    <template v-if="items.length">
+      <JumboListItem v-for="item in items" :key="item" :label="item"/>
+    </template>
     <p v-if="!loading && !items.length" class="no-results-alert">No results</p>
-    <p v-if="loading" class="no-results-alert">Loading...</p>
+    <p v-if="loading && !items.length" class="loading-alert">Loading...</p>
   </ul>
 </template>
 
