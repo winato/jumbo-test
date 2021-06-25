@@ -1,6 +1,8 @@
 <template>
-  <ul>
+  <ul class="list">
     <JumboListItem v-for="item in items" :key="item" :label="item"/>
+    <p v-if="!loading && !items.length" class="no-results-alert">No results</p>
+    <p v-if="loading" class="no-results-alert">Loading...</p>
   </ul>
 </template>
 
@@ -19,6 +21,22 @@ export default {
       type: Array,
       default: () => [],
     },
+    loading: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>
+
+<style scoped>
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .no-results-alert {
+    text-align: center;
+  }
+</style>

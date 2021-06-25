@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Stores from './components/Stores.vue';
+import Stores from '@/components/features/Stores.vue';
 
 export default {
   name: 'App',
@@ -18,9 +18,6 @@ export default {
 <style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

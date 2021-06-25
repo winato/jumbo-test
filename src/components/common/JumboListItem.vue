@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="list-item">
     {{ label }}
   </li>
 </template>
@@ -16,3 +16,14 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+@import "../../styles/_variables.scss";
+  .list-item {
+    display: inline-block;
+    background: $yellow;
+    margin: .5rem;
+    padding: .4rem .5rem;
+    font-weight: 900;
+  }
+</style>

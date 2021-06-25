@@ -1,16 +1,16 @@
 import getters from '@/store/main/getters'
 
-test('"getShopsByName" returns only array of strings of shops names', () => {
+test('"getStoresByName" returns only array of strings of stores names', () => {
   const state = {
     initialData: [{
       addressName: "Jumbo 's-Gravendeel van der Hoek",
     }]
   }
 
-  expect(getters.getShopsByName(state)).toEqual(["'s-Gravendeel van der Hoek"]);
+  expect(getters.getStoresByName(state)).toEqual(["'s-Gravendeel van der Hoek"]);
 });
 
-test('"getShopsByName" returns only array of strings of shops names', () => {
+test('"getStoresByName" returns only array of strings of stores names', () => {
   const state = {
     initialData: [
       {
@@ -22,10 +22,10 @@ test('"getShopsByName" returns only array of strings of shops names', () => {
     ]
   }
 
-  expect(getters.getShopsByName(state)).toEqual(["'s-Gravendeel van der Hoek"]);
+  expect(getters.getStoresByName(state)).toEqual(["'s-Gravendeel van der Hoek"]);
 });
 
-test('"getShopsByName" returns only array of strings of shops names', () => {
+test('"getStoresByName" returns only array of strings of stores names', () => {
   const state = {
     initialData: [
       {
@@ -37,28 +37,28 @@ test('"getShopsByName" returns only array of strings of shops names', () => {
     ]
   }
 
-  expect(getters.getShopsByName(state)).toEqual(["'s-Gravendeel van der Hoek", "'s-Heerenberg Stadsplein"]);
+  expect(getters.getStoresByName(state)).toEqual(["'s-Gravendeel van der Hoek", "'s-Heerenberg Stadsplein"]);
 });
 
-test('"getShopsByName" returns only array of strings of shops names', () => {
+test('"getStoresByName" returns only array of strings of stores names', () => {
   const state = {
     initialData: [],
   }
 
-  expect(getters.getShopsByName(state)).toEqual([]);
+  expect(getters.getStoresByName(state)).toEqual([]);
 });
 
-test('"getShopsByCity" returns only array of strings of shops names', () => {
+test('"getStoresByCity" returns only array of strings of stores names', () => {
   const state = {
     initialData: [{
       city: "'s-Gravendeel",
     }]
   }
 
-  expect(getters.getShopsByCity(state)).toEqual(["'s-Gravendeel"]);
+  expect(getters.getStoresByCity(state)).toEqual(["'s-Gravendeel"]);
 })
 
-test('"getShopsByCity" returns only array of strings of shops names', () => {
+test('"getStoresByCity" returns only array of strings of stores names', () => {
   const state = {
     initialData: [
       {
@@ -70,10 +70,10 @@ test('"getShopsByCity" returns only array of strings of shops names', () => {
     ]
   }
 
-  expect(getters.getShopsByCity(state)).toEqual(["'s-Gravendeel"]);
+  expect(getters.getStoresByCity(state)).toEqual(["'s-Gravendeel"]);
 });
 
-test('"getShopsByCity" returns only array of strings of shops names', () => {
+test('"getStoresByCity" returns only array of strings of stores names', () => {
   const state = {
     initialData: [
       {
@@ -85,13 +85,13 @@ test('"getShopsByCity" returns only array of strings of shops names', () => {
     ]
   }
 
-  expect(getters.getShopsByCity(state)).toEqual(["'s-Gravendeel", "Aalten"]);
+  expect(getters.getStoresByCity(state)).toEqual(["'s-Gravendeel", "Aalten"]);
 })
 
-test('"getShopsByCity" returns only array of strings of shops names', () => {
+test('"getStoresByCity" returns only array of strings of stores names', () => {
   const state = {
     initialData: [],
   }
 
-  expect(getters.getShopsByCity(state)).toEqual([]);
+  expect(getters.getStoresByCity(state)).toEqual([]);
 })

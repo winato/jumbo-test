@@ -1,10 +1,10 @@
 export default {
-  getShopsByName: (state) => {
-    const shops = state.initialData.map(({ addressName }) => addressName.replace('Jumbo ', ''));
-    return [...new Set(shops)];
+  getStoresByName: (state) => {
+    const stores = state.searchData.map(({ addressName }) => addressName.replace('Jumbo ', ''));
+    return [...new Set(stores)];
   },
-  getShopsByCity: (state) => {
-    const cities = state.initialData.map(({ city }) => city);
+  getStoresByCity: (state) => {
+    const cities = state.searchData.map(({ city }) => city);
     return [...new Set(cities)];
   },
 };

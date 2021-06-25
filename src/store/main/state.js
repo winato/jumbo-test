@@ -1,4 +1,7 @@
 export default {
+  isLoading: true,
   initialData: [],
-  listType: '',
+  listType: 'stores',
+  search: '',
+  searchData: [],
 };
