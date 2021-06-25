@@ -21,7 +21,7 @@ import {
 import JumboButton from '@/components/common/JumboButton.vue';
 
 export default {
-  name: 'StoreSelector',
+  name: 'StoresSelector',
 
   components: {
     JumboButton,

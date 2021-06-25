@@ -1,5 +1,6 @@
 <template>
   <JumboList
+    class="stores-by-city"
     :items="getStoresByCity"
     :loading="isLoading"
   />
