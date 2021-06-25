@@ -13,20 +13,12 @@ export default {
     state.search = payload;
     const { listType } = state;
 
-    if (listType === 'stores') {
-      state.searchData = searchData({
-        data: state.initialData,
-        text: payload,
-        param: 'addressName',
-      });
-    }
+    const param = listType === 'stores' ? 'addressName' : 'city';
 
-    if (listType === 'cities') {
-      state.searchData = searchData({
-        data: state.initialData,
-        text: payload,
-        param: 'city',
-      });
-    }
+    state.searchData = searchData({
+      data: state.initialData,
+      text: payload,
+      param,
+    });
   },
 };
