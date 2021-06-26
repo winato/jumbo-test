@@ -12,14 +12,16 @@ describe('JumboInput.vue', () => {
     expect(textInput.element.value).toBe(value);
     expect(wrapper.emitted('input')[0]).toEqual([value]);
   });
-  it('Test placeholder', async () => {
+  
+  it('Test placeholder', () => {
+    const placeholderText = 'Some placeholder'
     const wrapper = shallowMount(JumboInput, {
       propsData: {
-        placeholder: 'Some placeholder'
+        placeholder: placeholderText,
       }
     });
     const textInput = wrapper.find('input[type="text"]');
 
-    expect(textInput.attributes('placeholder')).toBe('Some placeholder')
+    expect(textInput.attributes('placeholder')).toBe(placeholderText);
   });
 });
