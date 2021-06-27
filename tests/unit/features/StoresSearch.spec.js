@@ -16,8 +16,6 @@ describe('StoresSearch.vue', () => {
 
     const input = wrapper.find('input.stores-search');
 
-    await input.setValue('asdasd');
-
     expect(input.exists()).toBe(true);
     expect(wrapper.exists()).toBe(true);
   });
