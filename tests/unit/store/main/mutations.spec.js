@@ -5,7 +5,8 @@ describe('main/mutations.js', () => {
   it('Test "setInitialData" mutation', () => {
     const state = {
       initialData: [],
-      listType: '',
+      searchData: [],
+      isLoading: true,
     };
   
     const mockData = [{
@@ -30,12 +31,13 @@ describe('main/mutations.js', () => {
   
     mutations.setInitialData(state, mockData);
   
+    expect(state.searchData).toBe(mockData);
+    expect(state.isLoading).toBe(false);
     expect(state.initialData).toBe(mockData);
   })
   
   it('Test "setListType" mutation', () => {
     const state = {
-      initialData: [],
       listType: '',
     };
   
