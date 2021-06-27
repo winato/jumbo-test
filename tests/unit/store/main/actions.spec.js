@@ -4,7 +4,7 @@ import actions from '@/store/main/actions';
 
 Vue.use(Vuex);
 
-describe('actions', () => {
+describe('main/actions.js', () => {
   let store;
   let setDataMock;
 
