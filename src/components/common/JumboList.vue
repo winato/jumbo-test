@@ -32,13 +32,13 @@ export default {
 </script>
 
 <style scoped>
-  .list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .no-results-alert, .loading-alert {
-    text-align: center;
-  }
+.no-results-alert, .loading-alert {
+  text-align: center;
+}
 </style>

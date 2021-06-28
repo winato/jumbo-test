@@ -19,12 +19,13 @@ export default {
 
 <style scoped lang="scss">
 @import "../../styles/_variables.scss";
-  .list-item {
-    display: inline-block;
-    background: $yellow;
-    margin: .5rem;
-    padding: .4rem 1rem;
-    font-weight: 900;
-    border-radius: .2rem;
-  }
+
+.list-item {
+  display: inline-block;
+  background: $yellow;
+  margin: .5rem;
+  padding: .4rem 1rem;
+  font-weight: 900;
+  border-radius: .2rem;
+}
 </style>
