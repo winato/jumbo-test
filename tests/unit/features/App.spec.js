@@ -2,7 +2,7 @@ import App from '@/components/App.vue';
 import { shallowMount } from '@vue/test-utils';
 import Stores from '@/components/features/Stores.vue';
 
-describe('Test render App', () => {
+describe('App.js', () => {
   it('Test render', () => {
     const wrapper = shallowMount(App);
 

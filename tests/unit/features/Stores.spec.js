@@ -11,7 +11,7 @@ const localVue = createLocalVue();
 
 localVue.use(Vuex);
 
-describe("Test Stores.vue", () => {
+describe("Stores.vue", () => {
   it('Display StoresByName, with default listType', () => {
     const wrapper = shallowMount(Stores, {
       localVue,
@@ -38,5 +38,5 @@ describe("Test Stores.vue", () => {
     expect(wrapper.findComponent(StoresByCity).exists()).toBe(true)
     expect(wrapper.findComponent(StoresSelector).exists()).toBe(true)
     expect(wrapper.findComponent(StoresSearch).exists()).toBe(true)
-  })
+  });
 })
