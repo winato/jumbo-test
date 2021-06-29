@@ -15,10 +15,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+
+@import "../styles/global.scss";
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 4rem;
 }
 </style>
