@@ -6,7 +6,7 @@ describe('JumboButton.vue', () => {
     const wrapper = shallowMount(JumboButton);
     const button = wrapper.find('button');
 
-    button.trigger('click');
+    await button.trigger('click');
     expect(wrapper.emitted().click).toBeTruthy();
   });
 

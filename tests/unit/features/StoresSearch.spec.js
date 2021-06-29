@@ -8,7 +8,7 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('StoresSearch.vue', () => {
-  it('Test render', async () => {
+  it('Test render', () => {
     const wrapper = mount(StoresSearch, {
       store,
       localVue,
