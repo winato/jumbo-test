@@ -2,7 +2,9 @@
   <div class="header">
     <div class="container">
       <div class="header-holder">
-        <img src="../../assets/logo.png" alt="Jumbo logo" class="logo">
+        <a href="https://www.jumbo.com">
+          <img src="../../assets/logo.png" alt="Jumbo logo" class="logo">
+        </a>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header/>
+    <TheHeader/>
     <div class="shop-bg">
       <StoresSelector />
       <StoresSearch />
@@ -21,7 +21,7 @@ import StoresByCity from '@/components/features/StoresByCity.vue';
 import StoresByName from '@/components/features/StoresByName.vue';
 import StoresSelector from '@/components/features/StoresSelector.vue';
 import StoresSearch from '@/components/features/StoresSearch.vue';
-import Header from '@/components/features/Header.vue';
+import TheHeader from '@/components/shared/TheHeader.vue';
 
 export default {
   name: 'Stores',
@@ -31,7 +31,7 @@ export default {
     StoresByCity,
     StoresSelector,
     StoresSearch,
-    Header,
+    TheHeader,
   },
 
   created() {
