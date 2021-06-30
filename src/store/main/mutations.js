@@ -10,11 +10,10 @@ export default {
     state.listType = payload;
   },
   setSearch(state, payload) {
-    state.search = payload;
     const { listType } = state;
-
     const param = listType === 'stores' ? 'addressName' : 'city';
 
+    state.search = payload;
     state.searchData = searchData({
       data: state.initialData,
       text: payload,

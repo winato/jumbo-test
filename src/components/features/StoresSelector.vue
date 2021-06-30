@@ -28,14 +28,15 @@ export default {
   },
 
   computed: {
-    ...mapState('main', ['listType']),
+    ...mapState('main', ['listType', 'search']),
   },
 
   methods: {
-    ...mapMutations('main', ['setListType']),
+    ...mapMutations('main', ['setListType', 'setSearch']),
 
     onSelect(type) {
       this.setListType(type);
+      this.setSearch(this.search);
     },
   },
 };
