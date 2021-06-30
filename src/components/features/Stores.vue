@@ -2,8 +2,10 @@
   <div>
     <TheHeader/>
     <div class="shop-bg">
-      <StoresSelector />
-      <StoresSearch />
+      <div class="container">
+        <StoresSelector />
+        <StoresSearch />
+      </div>
     </div>
     <div class="container">
       <StoresByCity v-if="listType === 'cities'"/>

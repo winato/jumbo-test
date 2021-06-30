@@ -36,7 +36,6 @@ export default {
 .stores-search {
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 }
 </style>
