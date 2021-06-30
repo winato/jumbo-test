@@ -7,6 +7,7 @@ describe('JumboButton.vue', () => {
     const button = wrapper.find('button');
 
     await button.trigger('click');
+    
     expect(wrapper.emitted().click).toBeTruthy();
   });
 

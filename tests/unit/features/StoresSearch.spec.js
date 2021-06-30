@@ -16,8 +16,8 @@ describe('StoresSearch.vue', () => {
 
     const input = wrapper.find('input.stores-search');
 
-    expect(input.exists()).toBe(true);
     expect(wrapper.exists()).toBe(true);
+    expect(input.exists()).toBe(true);
   });
 
   it('Should change the input value', async () => {

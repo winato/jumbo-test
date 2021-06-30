@@ -7,8 +7,8 @@ describe('Header.vue', () => {
     const link = wrapper.find('a');
     const logo = link.find('img.logo');
   
+    expect(wrapper.exists()).toBe(true);
     expect(link.exists()).toBe(true);
     expect(logo.exists()).toBe(true);
-    expect(wrapper.exists()).toBe(true);
   })
 })
