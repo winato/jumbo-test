@@ -18,7 +18,7 @@ import {
   mapMutations,
   mapState,
 } from 'vuex';
-import JumboButton from '@/components/common/JumboButton.vue';
+import JumboButton from '@/components/general/JumboButton.vue';
 
 export default {
   name: 'StoresSelector',

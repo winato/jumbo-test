@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import JumboList from '@/components/common/JumboList.vue';
+import JumboList from '@/components/general/JumboList.vue';
 import {
   mapState,
   mapGetters,

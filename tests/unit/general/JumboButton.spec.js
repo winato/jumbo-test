@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
-import JumboButton from '@/components/common/JumboButton.vue';
+import JumboButton from '@/components/general/JumboButton.vue';
 
 describe('JumboButton.vue', () => {
-  it('Test click event', async () => {
+  it('Should trigger the cleck event', async () => {
     const wrapper = shallowMount(JumboButton);
     const button = wrapper.find('button');
 
@@ -10,7 +10,7 @@ describe('JumboButton.vue', () => {
     expect(wrapper.emitted().click).toBeTruthy();
   });
 
-  it('Test slot with text', () => {
+  it('Should render the slot with text', () => {
     const slot = 'Button'
     const wrapper = shallowMount(JumboButton, {
       slots: {
@@ -21,7 +21,7 @@ describe('JumboButton.vue', () => {
     expect(wrapper.text()).toBe(slot);
   });
 
-  it('Test active button', async () => {
+  it('Should toggle the active class to button', async () => {
     const isActive = true;
 
     const wrapper = shallowMount(JumboButton, {

@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import Header from '@/components/shared/TheHeader.vue';
 
 describe('Header.vue', () => {
-  it('Test render', () => {
+  it('Should render TheHeader component with logo and link', () => {
     const wrapper = mount(Header);
     const link = wrapper.find('a');
     const logo = link.find('img.logo');

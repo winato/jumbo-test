@@ -23,12 +23,13 @@ describe('main/actions.js', () => {
     })
   })
   
-  it('tests using a mock mutation but real store', async () => {
+  it('Should dispatch the action', async () => {
     store.hotUpdate({
       mutations: { setInitialData: setDataMock }
     });
+
     await store.dispatch('getInitialData');
 
     expect(setDataMock.mock.calls).toHaveLength(1);
-  })
+  });
 })

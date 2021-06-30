@@ -8,7 +8,7 @@
 
 <script>
 import { mapMutations } from 'vuex';
-import JumboInput from '@/components/common/JumboInput.vue';
+import JumboInput from '@/components/general/JumboInput.vue';
 import debounce from 'lodash.debounce';
 
 export default {

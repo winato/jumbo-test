@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
-import JumboInput from '@/components/common/JumboInput.vue';
+import JumboInput from '@/components/general/JumboInput.vue';
 
 describe('JumboInput.vue', () => {
-  it('Test input', async () => {
+  it('Should set value to input', async () => {
     const wrapper = shallowMount(JumboInput);
     const textInput = wrapper.find('input[type="text"]');
     const value = 'Some value';
@@ -13,7 +13,7 @@ describe('JumboInput.vue', () => {
     expect(wrapper.emitted('input')[0]).toEqual([value]);
   });
   
-  it('Test placeholder', () => {
+  it('Should display the placeholder in input', () => {
     const placeholderText = 'Some placeholder'
     const wrapper = shallowMount(JumboInput, {
       propsData: {

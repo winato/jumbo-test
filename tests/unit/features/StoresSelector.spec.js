@@ -8,7 +8,7 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('StoresSelector.vue', () => {
-  it('Test render of buttons', () => {
+  it('Should display two buttons of selector', () => {
     const wrapper = mount(StoresSelector, {
       localVue,
       store,
@@ -23,7 +23,7 @@ describe('StoresSelector.vue', () => {
     expect(wrapper.exists()).toBe(true)
   })
 
-  it('Test changing of class of active button', async () => {
+  it('Should change active button', async () => {
     const wrapper = mount(StoresSelector, {
       localVue,
       store,

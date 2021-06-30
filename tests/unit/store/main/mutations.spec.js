@@ -2,7 +2,7 @@ import mutations from '@/store/main/mutations';
 import faker from "faker";
 
 describe('main/mutations.js', () => {
-  it('Test "setInitialData" mutation', () => {
+  it('Should set data to state', async () => {
     const state = {
       initialData: [],
       searchData: [],
@@ -29,26 +29,26 @@ describe('main/mutations.js', () => {
       uuid: faker.datatype.uuid(),
     }];
   
-    mutations.setInitialData(state, mockData);
+    await mutations.setInitialData(state, mockData);
   
     expect(state.searchData).toBe(mockData);
     expect(state.isLoading).toBe(false);
     expect(state.initialData).toBe(mockData);
   })
   
-  it('Test "setListType" mutation', () => {
+  it('Should change listType in store', async () => {
     const state = {
       listType: '',
     };
   
-    mutations.setListType(state, 'cities');
+    await mutations.setListType(state, 'cities');
     expect(state.listType).toBe('cities');
   
-    mutations.setListType(state, 'stores');
+    await mutations.setListType(state, 'stores');
     expect(state.listType).toBe('stores');
   })
   
-  it('Test "setSearch" mutation when result excists', () => {
+  it('Should set searchData depends on initial state', async () => {
     const state = {
       initialData: [
         {
@@ -66,7 +66,8 @@ describe('main/mutations.js', () => {
   
     const searchString = 'Am';
   
-    mutations.setSearch(state, searchString);
+    await mutations.setSearch(state, searchString);
+    
     expect(state.search).toBe(searchString);
   
     expect(state.searchData).toEqual([
@@ -79,7 +80,7 @@ describe('main/mutations.js', () => {
     ])
   })
   
-  it('Test "setSearch" mutation when result does not ecxists', () => {
+  it('Should set empty array when searched value doesn`t excists', async () => {
     const state = {
       initialData: [
         {
@@ -97,14 +98,14 @@ describe('main/mutations.js', () => {
   
     const searchString = 'New-York';
   
-    mutations.setSearch(state, searchString);
+    await mutations.setSearch(state, searchString);
     expect(state.search).toBe(searchString);
   
     expect(state.searchData).toEqual([])
   });
   
   
-  it('Test "setSearch" mutation on empty list', () => {
+  it('Should set empty array when data is empty', async () => {
     const state = {
       initialData: [],
       listType: 'cities',
@@ -112,7 +113,7 @@ describe('main/mutations.js', () => {
   
     const searchString = 'New-York';
   
-    mutations.setSearch(state, searchString);
+    await mutations.setSearch(state, searchString);
     expect(state.search).toBe(searchString);
   
     expect(state.searchData).toEqual([])

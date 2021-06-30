@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils';
-import JumboListItem from '@/components/common/JumboListItem.vue';
+import JumboListItem from '@/components/general/JumboListItem.vue';
 
 describe('JumboListItem.vue', () => {
-  it('renders props.label when passed', () => {
+  it('Should render the prop text in component', () => {
     const label = 'new message';
     const wrapper = shallowMount(JumboListItem, {
       propsData: { label },

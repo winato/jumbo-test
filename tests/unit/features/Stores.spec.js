@@ -12,7 +12,7 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe("Stores.vue", () => {
-  it('Display StoresByName, with default listType', () => {
+  it('Should render StoresByName.vue, with default list type "ctores"', () => {
     const wrapper = shallowMount(Stores, {
       localVue,
       store,
@@ -24,7 +24,7 @@ describe("Stores.vue", () => {
     expect(wrapper.findComponent(StoresSearch).exists()).toBe(true)
   });
 
-  it('Display StoresByName, with listType changed to "cities"', async () => {
+  it('Should render StoresByName.vue, with listType changed to "cities"', async () => {
     const wrapper = mount(Stores, {
       localVue,
       store,

@@ -8,7 +8,7 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('StoresByName.vue', () => {
-  it('Test render', () => {
+  it('Should render the ul with list class', () => {
     const wrapper = mount(StoresByName, {
       store,
       localVue,
@@ -16,7 +16,7 @@ describe('StoresByName.vue', () => {
 
     const list = wrapper.find('ul.list');
 
-    expect(list.exists()).toBe(true);
     expect(wrapper.exists()).toBe(true);
+    expect(list.exists()).toBe(true);
   })
 })

@@ -8,7 +8,7 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('StoresSearch.vue', () => {
-  it('Test render', () => {
+  it('Sould display the input component with stores-search class', () => {
     const wrapper = mount(StoresSearch, {
       store,
       localVue,
@@ -20,7 +20,7 @@ describe('StoresSearch.vue', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  it('Test changing of value in input', async () => {
+  it('Should change the input value', async () => {
     const wrapper = mount(StoresSearch, {
       store,
       localVue,

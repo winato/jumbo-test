@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils';
 import Stores from '@/components/features/Stores.vue';
 
 describe('App.js', () => {
-  it('Test render', () => {
+  it('Should render component with app id', () => {
     const wrapper = shallowMount(App);
 
     const stores = wrapper.findComponent(Stores);
