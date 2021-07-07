@@ -6,7 +6,7 @@
     }"
     @click.prevent="() => $emit('click')"
   >
-    <slot/>
+    <slot />
   </button>
 </template>
 
@@ -17,26 +17,26 @@ export default {
   props: {
     active: {
       type: Boolean,
-      defaul: false,
+      default: false,
     },
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import "../../styles/_variables.scss";
+@import '../../styles/_variables.scss';
 
 .button {
   display: block;
   background-color: white;
   border: 1px solid $gray;
-  padding: .5rem 1.5rem;
-  margin: .3rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0.3rem;
   font-weight: 700;
   border-radius: 2rem;
   font-size: 1rem;
-  transition-duration: .2s;
-  transition-property: background-color,border,color;
+  transition-duration: 0.2s;
+  transition-property: background-color, border, color;
   transition-timing-function: ease-in-out;
   outline: none;
 
@@ -48,5 +48,4 @@ export default {
     color: white;
   }
 }
-
 </style>

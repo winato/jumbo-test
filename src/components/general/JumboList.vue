@@ -1,7 +1,7 @@
 <template>
   <ul class="list">
     <template v-if="items.length">
-      <JumboListItem v-for="item in items" :key="item" :label="item"/>
+      <JumboListItem v-for="item in items" :key="item" :label="item" />
     </template>
     <p v-if="!loading && !items.length" class="no-results-alert">No results</p>
     <p v-if="loading && !items.length" class="loading-alert">Loading...</p>
@@ -38,7 +38,8 @@ export default {
   padding: 0;
 }
 
-.no-results-alert, .loading-alert {
+.no-results-alert,
+.loading-alert {
   text-align: center;
 }
 </style>

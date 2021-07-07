@@ -5,7 +5,7 @@
     @input="$emit('input', $event.target.value)"
     :placeholder="placeholder"
     :value="value"
-  >
+  />
 </template>
 
 <script>
@@ -26,13 +26,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../styles/_variables.scss";
+@import '../../styles/_variables.scss';
 
 .input {
   border: 1px solid $gray;
   border-radius: 2rem;
   display: flex;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   outline: none;
   display: block;
   width: 100%;
